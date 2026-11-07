@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffdf8">
+  <meta name="description" content="Coisas de Negócio — experiências, jogos e projetos para explorar.">
+  <title>Coisas de Negócio</title>
+  <style>
+    :root {
+      --page: #fffdf8;
+      --ink: #242321;
+      --muted: #77736d;
+      --gap: 16px;
+      --card-radius: 8px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+    }
+    .page {
+      width: min(100% - 36px, 1040px);
+      margin: 0 auto;
+      padding: 58px 0 42px;
+    }
+    header { text-align: center; margin-bottom: 38px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2.8px;
+      font-weight: 850;
+    }
+    .subtitle { margin: 12px 0 0; color: var(--muted); font-size: 16px; }
+    .hint { display: inline-block; margin-top: 18px; color: #99938a; font-size: 12px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: var(--gap);
+      justify-items: center;
+    }
+    .tile {
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 1;
+      border: 0;
+      border-radius: var(--card-radius);
+      padding: 17px;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      outline-offset: 4px;
+    }
+    .tile:hover {
+      transform: translateY(-5px) rotate(-1deg);
+      box-shadow: 0 11px 25px #33260f20;
+      filter: saturate(1.08);
+    }
+    .tile:active { transform: translateY(-1px) scale(.98); }
+    .emoji { font-size: 48px; line-height: 1; margin-bottom: 16px; }
+    .tile-title { font-size: 19px; font-weight: 850; letter-spacing: -.5px; }
+    .tile-desc { max-width: 180px; margin-top: 7px; color: #514d46; font-size: 12px; line-height: 1.4; }
+    footer { margin-top: 38px; text-align: center; color: #a19b91; font-size: 12px; }
+    @media (max-width: 520px) {
+      .page { width: min(100% - 28px, 430px); padding-top: 38px; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+      .tile { padding: 12px; }
+      .emoji { font-size: 40px; margin-bottom: 12px; }
+      .tile-title { font-size: 16px; }
+      .tile-desc { font-size: 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Coisas de Negócio</h1>
+      <p class="subtitle">Um monte de coisas interessantes para explorar.</p>
+      <span class="hint">Escolha um quadradinho e veja no que dá.</span>
+    </header>
+
+    <section class="grid" aria-label="Experiências">
+      <!-- Para editar: altere o link, emoji, título, descrição e cor de cada quadrado. -->
+      <a class="tile" href="https://neal.fun/" target="_blank" rel="noopener noreferrer" style="background:#ffe3a3">
+        <span class="emoji">🌀</span>
+        <span class="tile-title">Experiência 01</span>
+        <span class="tile-desc">Um exemplo de projeto para explorar.</span>
+      </a>
+      <a class="tile" href="https://itch.io/" target="_blank" rel="noopener noreferrer" style="background:#ffd4d4">
+        <span class="emoji">🎮</span>
+        <span class="tile-title">Jogos</span>
+        <span class="tile-desc">Um espaço para jogos e brincadeiras.</span>
+      </a>
+      <a class="tile" href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer" style="background:#d9e9ff">
+        <span class="emoji">🌍</span>
+        <span class="tile-title">Curiosidades</span>
+        <span class="tile-desc">Uma viagem por coisas aleatórias.</span>
+      </a>
+      <a class="tile" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" style="background:#d9f0d3">
+        <span class="emoji">📺</span>
+        <span class="tile-title">Vídeos</span>
+        <span class="tile-desc">Um exemplo de atalho para outro lugar.</span>
+      </a>
+      <a class="tile" href="https://codepen.io/" target="_blank" rel="noopener noreferrer" style="background:#eadcff">
+        <span class="emoji">🧪</span>
+        <span class="tile-title">Experimentos</span>
+        <span class="tile-desc">Pequenas ideias interativas.</span>
+      </a>
+      <a class="tile" href="https://github.com/" target="_blank" rel="noopener noreferrer" style="background:#f7d9b8">
+        <span class="emoji">🛠️</span>
+        <span class="tile-title">Projetos</span>
+        <span class="tile-desc">Coisas feitas para a internet.</span>
+      </a>
+    </section>
+
+    <footer>Feito para a internet por Coisas de Negócio.</footer>
+  </main>
+</body>
+</html>
